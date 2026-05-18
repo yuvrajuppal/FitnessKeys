@@ -1,0 +1,111 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FITNESS KEYS — DESIGN THEME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. COLOR PALETTE
+──────────────────
+Background (page):  #0d0d0b  (near-black)
+Surface (card):     #12120f  (very dark olive)
+Surface hover:      #161612
+Border (default):   zinc-800 (#27272a)
+Border (hover):     zinc-700 (#3f3f42)
+
+Primary accent:     #b4fe00  (lime green)
+Accent hover:       #a0e800
+Accent tint:        bg-[#b4fe00]/10, bg-[#b4fe00]/30
+
+Text (primary):     white
+Text (secondary):   zinc-400 (#a1a1aa)
+Text (muted):       zinc-500 (#71717a), zinc-600 (#52525b)
+
+Category accents:
+  Chest:    #b4fe00 (lime)
+  Triceps:  #f97316 (orange)
+  Back:     #3b82f6 (blue)
+  Biceps:   #ef4444 (red)
+  Legs:     #a855f7 (purple)
+  Shoulders:#06b6d4 (cyan)
+
+Danger:             red-500 / red-600
+Overlay:            bg-black/80, backdrop-blur-sm
+
+2. TYPOGRAPHY
+──────────────────
+Font:               Inter / system-ui (sans-serif)
+Headings:           font-black, uppercase, tracking-tight
+  H1:               text-4xl md:text-5xl
+  Card title:       text-lg font-bold
+Labels:             text-xs font-semibold uppercase tracking-[0.15em] or [0.2em]
+Body:               text-sm text-zinc-500
+Numbers/index:      font-mono text-[11px] font-bold
+
+3. CORNERS & SHAPES
+──────────────────
+Cards/Modals:       rounded-xl (0.75rem)
+Buttons:            rounded-xl
+Small elements:     rounded-lg (0.5rem)
+Avatars/icons:      rounded-full
+Inputs:             rounded-xl
+
+4. SPACING
+──────────────────
+Page padding:       px-6 py-14 (desktop: md:px-10 md:py-16)
+Card gap:           gap-5
+Card padding:       p-5 md:p-6
+Modal padding:      p-7
+Section gap:        mb-8, mb-14
+
+5. ANIMATIONS
+──────────────────
+fade-in-up:         opacity 0 -> 1, translateY(30px) -> 0
+                    duration: 0.4s-0.7s, ease-out
+scale-in:           opacity 0 -> 1, scale(0.95) -> 1
+                    duration: 0.2s, ease-out
+Card hover:         border hover, scale-105 image, translate-y-0 actions
+Nav backdrop:       backdrop-blur-lg
+
+Stagger delay:      index * 80ms
+
+6. EFFECTS
+──────────────────
+Card hover:         border-zinc-800 -> border-zinc-700
+Image hover:        scale-105 transition 500ms
+Actions overlay:    opacity-0 -> opacity-100 on group-hover
+                    backdrop-blur-sm, bg-black/60
+Gradient:           bg-gradient-to-t from-[#0d0d0b] via-[#0d0d0b]/60 to-transparent
+                    bg-gradient-to-r from-[#0d0d0b]/40 to-transparent
+Accent bar:         absolute top-0 h-[3px] w-full bg-[#b4fe00]/40
+Dot separators:     w-[3px] h-[3px] rounded-full bg-zinc-700
+
+7. COMPONENT PATTERNS
+──────────────────
+Buttons:
+  Primary:    bg-[#b4fe00] text-[#0d0d0b] font-bold rounded-xl
+              hover:bg-[#a0e800] active:scale-95
+  Secondary:  bg-zinc-800 text-zinc-300 rounded-lg font-medium
+              hover:bg-zinc-700
+  Danger:     bg-red-600 text-white rounded-xl font-semibold
+              hover:bg-red-700
+  Ghost:      text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-xl
+
+Inputs:       bg-[#0d0d0b] border-zinc-700 text-white
+              focus:ring-2 focus:ring-[#b4fe00] focus:border-transparent
+File upload:  border-2 border-dashed border-zinc-700
+              hover:border-zinc-500 bg-[#0d0d0b]/50
+
+Modals:       bg-[#12120f] border-zinc-800 rounded-2xl shadow-2xl
+              backdrop: bg-black/80 backdrop-blur-sm
+              animation: scale-in 0.2s ease-out
+
+Navbar:       sticky top-0 z-40 bg-[#0d0d0b]/80 backdrop-blur-lg
+              border-b border-zinc-800/60
+              active link: bg-[#b4fe00]/10 text-[#b4fe00]
+
+8. LAYOUT
+──────────────────
+Max width:          max-w-6xl mx-auto
+Center content:     mx-auto px-6
+Grid:               grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5
+Responsive:         Mobile-first with md: breakpoints
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
