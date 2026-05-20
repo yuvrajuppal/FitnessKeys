@@ -54,7 +54,7 @@ function CategotiesPage() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `${API_BASE}/api/categories/GetAllCategories`
+        `${API_BASE}/categories/GetAllCategories`
       );
       setCategories(data);
     } catch (err) {
@@ -104,8 +104,8 @@ function CategotiesPage() {
 
     try {
       const url = editing
-        ? `${API_BASE}/api/categories/UpdateCategory/${editing.id}`
-        : `${API_BASE}/api/categories/CreateCategory`;
+        ? `${API_BASE}/categories/UpdateCategory/${editing.id}`
+        : `${API_BASE}/categories/CreateCategory`;
       const method = editing ? "PUT" : "POST";
 
       const { data } = await axios({ url, method, data: formData });
@@ -129,7 +129,7 @@ function CategotiesPage() {
     if (!deleting) return;
     try {
       const { data } = await axios.delete(
-        `${API_BASE}/api/categories/DeleteCategory/${deleting.id}`
+        `${API_BASE}/categories/DeleteCategory/${deleting.id}`
       );
       if (data.error) {
         alert(data.error);

@@ -68,7 +68,7 @@ export const BodyCategories: React.FC = () => {
     const fetchCategories = async () => {
       try {
         const { data } = await axios.get(
-          `${APIROUTE}/api/categories/GetAllCategories`
+          `${APIROUTE}/categories/GetAllCategories`
         );
         setCategories(data);
       } catch (err) {

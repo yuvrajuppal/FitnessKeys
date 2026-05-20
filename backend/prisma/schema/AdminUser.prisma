@@ -1,0 +1,9 @@
+model AdminUser {
+    id        String   @id @default(cuid())
+    admin_username     String   @unique
+    password  String
+    name      String
+    role      String   @default("admin")
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}

@@ -65,7 +65,7 @@ function CategoryWorkout() {
 
   useEffect(() => {
     axios
-      .get(`${API_BASE}/api/categories/GetAllCategories`)
+      .get(`${API_BASE}/categories/GetAllCategories`)
       .then(({ data }) => setCategories(data))
       .catch((err) => console.error("Failed to fetch categories", err));
   }, []);
@@ -74,8 +74,8 @@ function CategoryWorkout() {
     setLoading(true);
     try {
       const url = filterCategoryId
-        ? `${API_BASE}/api/workouts/GetWorkoutsByCategory/${filterCategoryId}`
-        : `${API_BASE}/api/workouts/GetAllWorkouts`;
+        ? `${API_BASE}/workouts/GetWorkoutsByCategory/${filterCategoryId}`
+        : `${API_BASE}/workouts/GetAllWorkouts`;
       const { data } = await axios.get(url);
       setWorkouts(data);
     } catch (err) {
@@ -132,7 +132,7 @@ function CategoryWorkout() {
     try {
       if (editing) {
         const { data } = await axios.put(
-          `${API_BASE}/api/workouts/UpdateWorkout/${editing.id}`,
+          `${API_BASE}/workouts/UpdateWorkout/${editing.id}`,
           formData
         );
         if (data.error) {
@@ -141,7 +141,7 @@ function CategoryWorkout() {
         }
       } else {
         const { data } = await axios.post(
-          `${API_BASE}/api/workouts/CreateWorkout`,
+          `${API_BASE}/workouts/CreateWorkout`,
           formData
         );
         if (data.error) {
@@ -165,7 +165,7 @@ function CategoryWorkout() {
     if (!deleting) return;
     try {
       const { data } = await axios.delete(
-        `${API_BASE}/api/workouts/DeleteWorkout/${deleting.id}`
+        `${API_BASE}/workouts/DeleteWorkout/${deleting.id}`
       );
       if (data.error) {
         alert(data.error);

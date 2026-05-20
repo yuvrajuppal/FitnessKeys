@@ -24,6 +24,7 @@ import swaggerUi from "swagger-ui-express";
 import fs from "fs";
 import categoryRoutes from "./routes/Category.routes.js";
 import workoutRoutes from "./routes/Workout.routes.js";
+import adminUserRoutes from "./routes/AdminUser.routes.js";
 
 const swaggerData = JSON.parse(
   fs.readFileSync("./swagger-output.json", "utf-8"),
@@ -33,7 +34,8 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerData));
 
 app.use("/uploads", express.static("uploads"));
 
-app.use("/api/categories", categoryRoutes);
-app.use("/api/workouts", workoutRoutes);
+app.use("/categories", categoryRoutes);
+app.use("/workouts", workoutRoutes);
+app.use("/admin", adminUserRoutes);
 
 export default app;
