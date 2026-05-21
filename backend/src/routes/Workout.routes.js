@@ -8,14 +8,20 @@ import {
   DeleteWorkout,
 } from "../controller/Workout.controller.js";
 import { upload } from "../config/multer.js";
+import { adminAuth } from "../middleware/adminmiddleware.js";
 
 const router = Router();
 
-router.post("/CreateWorkout", upload.single("image"), CreateWorkout);
+//admin
+router.post("/CreateWorkout",adminAuth, upload.single("image"), CreateWorkout);
+router.put("/UpdateWorkout/:id",adminAuth, upload.single("image"), UpdateWorkout);
+router.delete("/DeleteWorkout/:id",adminAuth, DeleteWorkout);
+
+
+
 router.get("/GetAllWorkouts", GetAllWorkouts);
 router.get("/GetWorkoutById/:id", GetWorkoutById);
 router.get("/GetWorkoutsByCategory/:categoryId", GetWorkoutsByCategory);
-router.put("/UpdateWorkout/:id", upload.single("image"), UpdateWorkout);
-router.delete("/DeleteWorkout/:id", DeleteWorkout);
+
 
 export default router;

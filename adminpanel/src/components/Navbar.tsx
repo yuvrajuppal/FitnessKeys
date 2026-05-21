@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { APIROUTE } from "../utils/APIROUTES";
 import { setLoginState, setAdminName } from "../store/AdminSlice";
-
+import applogo from '../assets/applogo.png'
 const CategoriesIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
 );
@@ -54,10 +54,8 @@ function Navbar() {
           to="/"
           className="flex items-center gap-2.5 text-white font-black text-lg tracking-tight"
         >
-          <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#b4fe00] text-[#0d0d0b] font-bold text-sm">
-            F
-          </span>
-          <span className="hidden sm:inline">Fitness Admin</span>
+          <img src={applogo} alt="Fitness" className="w-8 h-8 object-contain" />
+          <span className="hidden sm:inline">FitnessKeys Admin</span>
         </NavLink>
 
         {/* Nav links */}

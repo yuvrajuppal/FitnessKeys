@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Dumbbell, LayoutGrid } from "lucide-react";
-
+import applogo from '../assets/applogo.png'
 const links = [
   { path: "/", label: "Home", icon: Dumbbell },
   { path: "/BodyCategories", label: "Categories", icon: LayoutGrid },
@@ -17,10 +17,8 @@ export const Navbar: React.FC = () => {
           to="/"
           className="flex items-center gap-2.5 text-white font-black text-lg tracking-tight"
         >
-          <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#b4fe00]">
-            <Dumbbell className="w-4 h-4 text-black" />
-          </span>
-          FitZone
+          <img src={applogo} alt="FitZone" className="w-8 h-8 object-contain" />
+          FitnessKeys
         </Link>
 
         <div className="flex items-center gap-1">
